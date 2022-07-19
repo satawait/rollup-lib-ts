@@ -26,7 +26,9 @@ export default {
   ],
   plugins: [
     esbuild({
-      target: 'es2015'
+      target: 'es2015',
+      minify: true,
+      drop: ['console', 'debugger']
     }),
     babel({
       presets: ['@babel/preset-env'],

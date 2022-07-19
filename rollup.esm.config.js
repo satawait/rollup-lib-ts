@@ -14,7 +14,9 @@ export default {
     preserveModules: true,
     plugins: [
       esbuild({
-        target: 'es2018'
+        target: 'es2018',
+        minify: true,
+        drop: ['console', 'debugger']
       }),
       nodeResolve(),
       json(),
