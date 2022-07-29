@@ -7,7 +7,7 @@ import { sumPrintFunc } from '../../../../dist/esm/index'
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  {{ sumPrintFunc(2, 3, 5) }}
+  {{ sumPrintFunc(2, 3, 15) }}
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 

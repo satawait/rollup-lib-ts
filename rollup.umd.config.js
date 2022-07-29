@@ -10,7 +10,7 @@ import esbuild from 'rollup-plugin-esbuild'
 const isProduction = process.env.NODE_ENV === 'production'
 const pluginsWithEnv = isProduction ? [] : [serve({
   open: true,
-  openPage: '/',
+  openPage: '/base/',
   port: 10001,
   contentBase: ['dist', 'examples']
 }), livereload('dist/umd')]
@@ -21,13 +21,13 @@ export default {
     {
       file: path.resolve(__dirname, 'dist/umd/index.js'),
       format: 'umd',
-      name: 'rain'
+      name: 'utils'
     }
   ],
   plugins: [
     esbuild({
       target: 'es2015',
-      minify: true,
+      minify: false,
       drop: ['console', 'debugger']
     }),
     babel({
