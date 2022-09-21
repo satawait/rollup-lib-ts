@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
-    <!-- <script src="../dist/umd/index.js"></script> -->
+    <!-- <script src="/umd/index.js"></script> -->
     <script type="importmap">
         {
           "imports": {
@@ -25,6 +25,7 @@
 </head>
 <body>
     <script>
+      // console.log(window.utils)
         window.requirejs(['/umd/index.js'], function(utils) {
             console.log(utils.sumPrintFunc(2, 2, 3));
         });
